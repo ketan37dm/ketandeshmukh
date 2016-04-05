@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  username: flock
+  password:
+  host: localhost
+
+development:
+  <<: *default
+  database: kd_development
+
+test:
+  <<: *default
+  database: kd_test
+
+production:
+  <<: *default
+  database: kd_production
